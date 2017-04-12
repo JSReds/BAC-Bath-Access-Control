@@ -17,10 +17,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script>
       //DOM Manipulation
-      $(document).ready(funciton(){
-        $('body').addClass('free');
+      $(document).ready(function() {
+				$('body').addClass('free');
       })
-
       //Socket events
       var socket = io.connect();
       socket.on('pir', function(data) {
