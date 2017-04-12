@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PIR Client</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script>
+        var socket = io.connect();
+        socket.on('pir', function(data) {
+            console.log('pir event: ' + data);
+            if (data) {
+                $('body').css({
+                  "background-color": "red"
+                });
+            } else {
+              $('body').css({
+                "background-color": "green"
+              });
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

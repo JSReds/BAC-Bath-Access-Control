@@ -1,0 +1,28 @@
+{
+    "name": "pir",
+    "version": "0.0.1",
+    "description": "A PIR sensor server",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "jshintConfig": {
+        "esversion": 6,
+        "strict": true
+    },
+    "author": "Andrea Rosci",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "bluebird": "^3.4.1",
+        "bower": "^1.7.9",
+        "coffee-script": "~1.9.3",
+        "dbus": "0.2.19",
+        "lodash": "^4.16.4",
+        "body-parser": "^1.17.1",
+        "compression": "^1.6.2",
+        "express": "^4.15.2",
+        "pi-pins": "^1.0.2",
+        "serve-static": "^1.12.1",
+        "socket.io": "^1.7.3"
+    }
+}
