@@ -16,19 +16,17 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script>
-        var socket = io.connect();
-        socket.on('pir', function(data) {
-            console.log('pir event: ', data);
-            if (data) {
-                $('body').css({
-                  "background-color": "red"
-                });
-            } else {
-              $('body').css({
-                "background-color": "green"
-              });
-            }
-        });
+      //DOM Manipulation
+      $(document).ready(funciton(){
+        $('body').addClass('free');
+      })
+
+      //Socket events
+      var socket = io.connect();
+      socket.on('pir', function(data) {
+          console.log('pir event: ', data);
+          if (data.value == 1) { $('body').toggleClass('free busy'); }
+      });
     </script>
 </head>
 
